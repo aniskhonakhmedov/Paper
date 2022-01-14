@@ -11,6 +11,14 @@
 
 body {
   background: #f5f4f0;
+  &::-webkit-scrollbar {
+    width: 15px;
+    background-color: #000;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #223c50;
+    border-radius: 10px;
+  }
 }
 
 .container {
@@ -90,7 +98,7 @@ body {
           &:hover {
             box-shadow: 0px 12px 9px 0px rgba(0, 0, 0, 0.377);
             cursor: pointer;
-            transform: scale(1.15) translateY(-10px);
+            transform: scale(1.15);
           }
         }
       }
@@ -142,7 +150,7 @@ body {
               &:hover {
                 box-shadow: 0px 12px 9px 0px rgba(0, 0, 0, 0.377);
                 cursor: pointer;
-                transform: scale(1.15) translateY(-10px);
+                transform: scale(1.15) translateY(-5px);
               }
             }
           }
@@ -163,8 +171,8 @@ body {
           border: 30px solid #161616;
           box-shadow: 6px 6px 30px rgba(22, 22, 22, 0.2);
           border-radius: 28px;
-          position: relative;
-          right: -150px;
+          // position: relative;
+          // right: -150px;
         }
       }
 
@@ -210,47 +218,242 @@ body {
         }
       }
 
-      .books {
-        height: 904px;
-        background: #161616;
+      .one,
+      .two {
         width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 80px;
+        position: relative !important;
+        .about {
+          .title {
+            font-size: 80px;
+            font-weight: 400;
+          }
 
-        .title {
-          font-size: 54px;
-          line-height: 54px;
-          color: white;
+          .about-p {
+            font-size: 23px;
+            font-weight: 400;
+          }
         }
 
-        p{
-            color: white;
-        }
-        .about{
-            font-size: 20px;
-            color: white;
-        }
-
-        .carousel{
-            position: absolute;
-            margin-top: 50px;
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            width: 110%;
-            height: 100%;
-            .item{
-                font-size: 16px;
-                height: 150px;
-                .picture{
-                    height: 280px;
-                    background-position: left;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                }
-                p{
-                    opacity: 0.8;
-                }
-            }
+        div {
+          margin: 25px 0;
         }
       }
+
+      .img-about-web {
+        width: 100%;
+        height: 700px;
+        background-position: center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background: #161616;
+        border: 30px solid #161616;
+        box-shadow: 6px 6px 30px rgba(22, 22, 22, 0.2);
+        border-radius: 28px;
+      }
     }
+  }
+
+  .one {
+    .img-about-web {
+      margin-right: 30px !important;
+    }
+  }
+
+  .app {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    .picture {
+      box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.2);
+      border-radius: 25px;
+    }
+
+    .title {
+      margin-top: 20px;
+    }
+    button {
+      margin: 20px 0 0 0;
+      width: 119px;
+      height: 39px;
+      border: none;
+      color: white;
+      background: #161616;
+      border-radius: 100px;
+      transition: 0.3s ease;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 12px 9px 0px rgba(0, 0, 0, 0.377);
+        cursor: pointer;
+        transform: scale(1.15) translateY(-10px);
+      }
+    }
+  }
+}
+
+footer {
+  padding: 85px 155px;
+  background: #161616;
+  width: 100%;
+  li,
+  h1,
+  h3,
+  p {
+    color: white;
+    list-style-type: none;
+  }
+  ul {
+    li {
+      margin-top: 0.6em;
+    }
+  }
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    .item {
+      .bottom-item {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .top {
+    .item:first-child {
+      display: none;
+    }
+    .item:last-child {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .title {
+    font-size: 50px !important;
+  }
+
+  .img-about-web {
+    height: 500px !important;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .img-about-web {
+    border: 20px solid #161616 !important;
+    height: 300px !important;
+    margin: 0 !important;
+  }
+
+  .one,
+  .two {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .viewport {
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .title {
+    font-size: 30px !important;
+  }
+
+  .logo {
+    display: none;
+  }
+  header {
+    justify-content: center !important;
+    .buttons {
+      display: none !important;
+    }
+  }
+
+  footer {
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  header {
+    .c_name {
+      width: 100% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .run .about {
+    width: 90% !important;
+  }
+
+  .app {
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .title {
+    font-size: 20px !important;
+  }
+
+  .about {
+    font-size: 15px !important;
+  }
+
+  .about-p {
+    font-size: 16px !important;
+  }
+
+  .bring {
+    padding: 100px 80px !important;
+    height: 600px !important;
+  }
+  .other-word {
+    margin-top: 30px !important;
+  }
+
+  .categories .two {
+    margin-bottom: -50px !important;
+  }
+
+  .app {
+    height: 300px !important;
+    margin-bottom: 40px !important;
+  }
+
+  footer {
+    h3{
+      font-size: 18px;
+    }
+    ul li {
+      font-size: 12px;
+    }
+  }
+
+  .container .one .img-about-web{
+    margin: 0 !important;
+  }
+  .container main .wrapper .one, .container main .wrapper .two{
+    padding: 40px;
+  }
+  
+  .bring{
+    padding: 25px !important;
+  }
+
+  .expoler{
+    margin-top: 15px !important;
+  }
+
+  .viewport{
+    padding: 25px !important;
   }
 }
