@@ -1,7 +1,6 @@
 {
   "name": "paper",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +16,14 @@
     "gulp-sass": "^5.1.0",
     "node-sass": "^7.0.1",
     "sass": "^1.48.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniskhonakhmedov/Paper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aniskhonakhmedov/Paper/issues"
+  },
+  "homepage": "https://github.com/aniskhonakhmedov/Paper#readme",
+  "description": ""
 }
